@@ -64,7 +64,7 @@ There are seven S3 storage classes.
 
 The table below provides the details of each Amazon S3 storage class:
 
-![aws_storage_table](aws_storage_table.png)
+![aws_storage_table](../Images/aws_storage_table.png)
 
 When you successfully upload a file to S3 you receive a HTTP 200 code.
 
@@ -77,7 +77,7 @@ This contrasts with transient data stores and ephemeral data stores which lose t
 The following table provides a description of persistent, transient, and ephemeral data stores and which AWS service to
 use:
 
-![aws_storage_table_2](aws_storage_table_2.png)
+![aws_storage_table_2](../Images/aws_storage_table_2.png)
 
 Bucket names must follow a set of rules:
 
@@ -122,7 +122,7 @@ It is a best practice to create buckets in regions that are physically closest t
 
 Additional capabilities offered by Amazon S3 include:
 
-![aws_storage_table_3](aws_storage_table_3.png)
+![aws_storage_table_3](../Images/aws_storage_table_3.png)
 
 ## AWS Snowball
 
@@ -138,7 +138,7 @@ Uses 256-bit encryption (managed with the AWS KMS) and tamper-resistant enclosur
 
 The table below describes the AWS Snow offerings at a high-level:
 
-![aws_storage_table_4](aws_storage_table_4.png)
+![aws_storage_table_4](../Images/aws_storage_table_4.png)
 
 Snowball can import to S3 or export from S3.
 
@@ -162,7 +162,7 @@ can scale your usage up or down within minutes – all while paying a low price 
 
 The following EBS volumes appear most often on the AWS exams:
 
-![aws_storage_table_5](aws_storage_table_5.png)
+![aws_storage_table_5](../Images/aws_storage_table_5.png)
 
 EBS volume data persists independently of the life of the instance.
 
@@ -185,17 +185,17 @@ The behavior can be changed by altering the “DeleteOnTermination” attribute.
 
 EBS Snapshots:
 
-Snapshots capture a point-in-time state of an instance.
-Snapshots are stored on S3.
-Does not provide granular backup (not a replacement for backup software).
-If you make periodic snapshots of a volume, the snapshots are incremental, which means that only the blocks on the
-device that have changed after your last snapshot are saved in the new snapshot.
-Even though snapshots are saved incrementally, the snapshot deletion process is designed so that you need to retain only
-the most recent snapshot to restore the volume.
-Snapshots can only be accessed through the EC2 APIs.
-EBS volumes are AZ specific, but snapshots are region specific.
+* Snapshots capture a point-in-time state of an instance.
+* Snapshots are stored on S3.
+* Does not provide granular backup (not a replacement for backup software).
+* If you make periodic snapshots of a volume, the snapshots are incremental, which means that only the blocks on the
+  device that have changed after your last snapshot are saved in the new snapshot.
+* Even though snapshots are saved incrementally, the snapshot deletion process is designed so that you need to retain
+  only the most recent snapshot to restore the volume.
+* Snapshots can only be accessed through the EC2 APIs.
+* EBS volumes are AZ specific, but snapshots are region specific.
 
-![amazon-ebs-snapshots](amazon-ebs-snapshots.png)
+![amazon-ebs-snapshots](../Images/amazon-ebs-snapshots.png)
 
 ## Instance Store Volumes
 
@@ -211,7 +211,8 @@ Instance store volume root devices are created from AMI templates stored on S3.
 
 Instance store volumes cannot be detached/reattached.
 
-Amazon Elastic File System (EFS)
+## Amazon Elastic File System (EFS)
+
 EFS is a fully managed service that makes it easy to set up and scale file storage in the Amazon Cloud.
 
 Good for big data and analytics, media processing workflows, content management, web serving, home directories etc.
@@ -248,14 +249,16 @@ Instances can be behind an ELB.
 
 There are two performance modes:
 
-“General Purpose” performance mode is appropriate for most file systems.
-“Max I/O” performance mode is optimized for applications where tens, hundreds, or thousands of EC2 instances are
-accessing the file system.
+* “General Purpose” performance mode is appropriate for most file systems.
+* “Max I/O” performance mode is optimized for applications where tens, hundreds, or thousands of EC2 instances are
+  accessing the file system.
+
 Amazon EFS is designed to burst to allow high throughput levels for periods of time.
 
-amazon-efs-filesystems
+![amazon-efs-filesystems](../Images/amazon-efs-filesystems.png)
 
 ## AWS Storage Gateway
+
 AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud
 storage.
 
@@ -269,7 +272,7 @@ To support these use cases, Storage Gateway offers three different types of gate
 * File Gateway – provides file system interfaces to on-premises servers.
 * Volume Gateway – provides block-based access for on-premises servers.
 * Tape Gateway – provides a virtual tape library that is compatible with common backup software (block and file
-interfaces).
+  interfaces).
 
 ## AWS Backup
 
@@ -305,6 +308,7 @@ learning to fraud detection. Lustre has been battle-tested across a wide range o
 sciences to media production to financial services.
 
 ## Amazon FSX for Windows File Server
+
 Your applications and end users can access reliable, performant, and secure shared file storage with Amazon FSx for
 Windows File Server. Using Amazon FSx, you can create highly available and durable file systems that span multiple
 availability zones (AZs) and can be accessed from up to thousands of computing instances.
@@ -320,3 +324,7 @@ application or user can access the storage. AWS Microsoft Managed AD and your on
 be integrated with Amazon FSx to control user access.
 
 Related posts:
+
+![https://digitalcloud.training/aws-cloudtrail/](../Images/aws_cloudtrail.png)
+![https://digitalcloud.training/aws-networking-services/](../Images/aws-networking-services.png)
+![https://digitalcloud.training/aws-end-user-computing/](../Images/aws-end-user-computing.png)

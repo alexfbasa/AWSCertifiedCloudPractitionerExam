@@ -1,5 +1,7 @@
 # AWS Compute Services
 
+![aws_compute](aws_compute.png)
+
 This article discusses AWS Compute in the context of the AWS Certified Cloud Practitioner Exam. This is one of the key
 technology areas covered in the exam guide.
 
@@ -292,6 +294,8 @@ default job queues and compute environment definitions that enable you to get st
 
 Related posts:
 
-![https://digitalcloud.training/aws-datasync/](../Images/aws_guardduty.png)
-![https://digitalcloud.training/aws-kms/](../Images/aws_kms.png)
-![https://digitalcloud.training/aws-storage-services/](../Images/aws_storage_services.png)
+![https://digitalcloud.training/amazon-aurora/](amazon-aurora.png)
+
+![https://digitalcloud.training/aws-content-delivery-and-dns-services/](aws-content-delivery-and-dns-services.png)
+
+![https://digitalcloud.training/aws-iam/](aws-iam.png)

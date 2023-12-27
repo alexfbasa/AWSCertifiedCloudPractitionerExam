@@ -1,6 +1,6 @@
 # AWS Storage Services
 
-![img.png](../Images/aws_type_table.png)
+![aws_Compute](aws_compute.png)
 
 Within the AWS Cloud there are various service options for many different types of architectures. With regard to the different AWS storage types of services, this cheat sheet will give you an in-depth overview on how to decide which of the AWS storage options to choose from, and which of the AWS storage services is ideal for any particular use case.
 

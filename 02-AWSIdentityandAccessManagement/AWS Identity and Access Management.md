@@ -1,5 +1,7 @@
 # AWS Identity and Access Management
 
+![aws_identity_access_management](../Images/aws_identity_access_management.png)
+
 AWS Identity and Access Management (IAM) is a powerful service that allows users to securely manage access to AWS
 resources.
 
@@ -393,7 +395,9 @@ Digital Cloud Training which includes both theory lessons and practical hands-on
 
 Related posts:
 
-![https://digitalcloud.training/aws-backup/](../Images/aws-backup.png)
-![https://digitalcloud.training/aws-cloud-computing-concepts/](../Images/aws-cloud-computing-concepts.png)
-![https://digitalcloud.training/aws-directory-services/](../Images/aws-directory-services.png)
+![https://digitalcloud.training/aws-secrets-manager/](../Images/aws-secrets-manager.png)
+
+![https://digitalcloud.training/amazon-cloudwatch/](../Images/amazon-cloudwatch.png)
+
+![https://digitalcloud.training/aws-storage-gateway/](../Images/aws-storage-gateway.png)
 
