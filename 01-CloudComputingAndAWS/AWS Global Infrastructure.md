@@ -1,3 +1,5 @@
+# AWS Global Infrastructure
+
 This article covers AWS Global Infrastructure training which is a key technology area covered in the Cloud Practitioner
 exam blueprint. The AWS infrastructure is built around Regions and Availability Zones (AZs).
 
@@ -11,7 +13,7 @@ connected through low-latency links.
 
 AWS are constantly expanding around the world and currently there are:
 
-![img_3.png](../Images/img_3.png)
+![aws_region_azs](../Images/aws_region_azs.png)
 
 Regions
 A region is a geographical area.
