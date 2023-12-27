@@ -211,81 +211,99 @@ category.
 
 ### Amazon Kinesis
 
-* Amazon Kinesis makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights and react quickly to new information.
+* Amazon Kinesis makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights
+  and react quickly to new information.
 * There are four types of Kinesis service:
-  * Kinesis Video Streams makes it easy to securely stream video from connected .devices to AWS for analytics, machine  learning (ML), and other processing.
-  * Kinesis Data Streams enables you to build custom applications that process or analyze streaming data for specialized needs.
-  * Kinesis Data Firehose is the easiest way to load streaming data into data stores and analytics tools.
-  * Amazon Kinesis Data Analytics is the easiest way to process and analyze real-time, streaming data.
+    * Kinesis Video Streams makes it easy to securely stream video from connected .devices to AWS for analytics, machine
+      learning (ML), and other processing.
+    * Kinesis Data Streams enables you to build custom applications that process or analyze streaming data for
+      specialized needs.
+    * Kinesis Data Firehose is the easiest way to load streaming data into data stores and analytics tools.
+    * Amazon Kinesis Data Analytics is the easiest way to process and analyze real-time, streaming data.
 * https://aws.amazon.com/kinesis/
 * https://digitalcloud.training/amazon-kinesis/
 
 ### AWS Data Pipeline
-AWS Data Pipeline is a web service that helps you reliably process and move data between different AWS compute and
-storage services, as well as on-premises data sources, at specified intervals.
-With AWS Data Pipeline, you can regularly access your data where it’s stored, transform, and process it at scale, and
-efficiently transfer the results to AWS services such as Amazon S3, Amazon RDS, Amazon DynamoDB, and Amazon EMR.
-AWS Data Pipeline helps you easily create complex data processing workloads that are fault tolerant, repeatable, and
-highly available.
-https://aws.amazon.com/datapipeline/
-AWS Glue
-AWS Glue is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and
-load their data for analytics.
-You can create and run an ETL job with a few clicks in the AWS Management Console.
-You simply point AWS Glue to your data stored on AWS, and AWS Glue discovers your data and stores the associated
-metadata (e.g. table definition and schema) in the AWS Glue Data Catalog.
-Once cataloged, your data is immediately searchable, queryable, and available for ETL.
-AWS Glue generates the code to execute your data transformations and data loading processes.
-https://aws.amazon.com/glue/features/
-Media Services
-Amazon Elastic Transcoder
-Amazon Elastic Transcoder is media transcoding in the cloud.
-It is designed to be a highly scalable, easy to use and a cost-effective way for developers and businesses to
-convert (
-or “transcode”) media files from their source format into versions that will playback on devices like smartphones,
-tablets, and PCs.
-https://aws.amazon.com/elastictranscoder/
-Mobile Services
-AWS AppSync
-AWS AppSync makes it easy to build data-driven mobile and browser-based apps that deliver responsive, collaborative
-experiences by keeping the data updated when devices are connected, enabling the app to use local data when offline,
-and
-synchronizing the data when the devices reconnect.
-AWS AppSync uses the open standard GraphQL query language so you can request, change, and subscribe to the exact data
-you need with just a few lines of code.
-https://aws.amazon.com/appsync/product-details/
-AWS Device Farm
-AWS Device Farm is an app testing service that lets you test and interact with your Android, iOS, and web apps on many
-devices at once, or reproduce issues on a device in real time.
-View video, screenshots, logs, and performance data to pinpoint and fix issues and increase quality before shipping
-your
-app.
-https://aws.amazon.com/device-farm/
-End User Computing
-Amazon Workspaces
-Amazon WorkSpaces is a managed, secure cloud desktop service. You can use Amazon WorkSpaces to provision either
-Windows
-or Linux desktops in just a few minutes and quickly scale to provide thousands of desktops to workers across the
-globe.
-Amazon WorkSpaces offers you an easy way to provide a secure, managed, cloud-based virtual desktop experience to your
-end-users.
-Unlike traditional on-premises Virtual Desktop Infrastructure (VDI) solutions, you don’t have to worry about
-procuring,
-deploying, and managing a complex environment – Amazon WorkSpaces takes care of the heavy lifting and provides a fully
-managed service.
-https://aws.amazon.com/workspaces/features/
-AWS AppStream
-Fully managed non-persistent application streaming service.
-Alternative to popular products such as Citrix XenApp.
-https://aws.amazon.com/appstream2/features/
-AWS WorkLink
-Provides secure, one-click access to your internal websites and web apps using mobile phone browsers.
-Does not require VPN client or App.
-https://aws.amazon.com/worklink/features/
-AWS WorkDocs
-Fully managed, secure content creation, storage, and collaboration service
-Create, edit, and share content that’s centrally stored on AWS.
-https://aws.amazon.com/workdocs/features/
+
+* AWS Data Pipeline is a web service that helps you reliably process and move data between different AWS compute and
+  storage services, as well as on-premises data sources, at specified intervals.
+* With AWS Data Pipeline, you can regularly access your data where it’s stored, transform, and process it at scale, and
+  efficiently transfer the results to AWS services such as Amazon S3, Amazon RDS, Amazon DynamoDB, and Amazon EMR.
+* AWS Data Pipeline helps you easily create complex data processing workloads that are fault tolerant, repeatable, and
+  highly available.
+* https://aws.amazon.com/datapipeline/
+
+### AWS Glue
+
+* AWS Glue is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and
+  load their data for analytics.
+* You can create and run an ETL job with a few clicks in the AWS Management Console.
+* You simply point AWS Glue to your data stored on AWS, and AWS Glue discovers your data and stores the associated
+  metadata (e.g. table definition and schema) in the AWS Glue Data Catalog.
+* Once cataloged, your data is immediately searchable, queryable, and available for ETL.
+* AWS Glue generates the code to execute your data transformations and data loading processes.
+* https://aws.amazon.com/glue/features/
+
+## Media Services
+
+### Amazon Elastic Transcoder
+
+* Amazon Elastic Transcoder is media transcoding in [the cloud](https://aws.amazon.com/what-is-cloud-computing/).
+* It is designed to be a highly scalable, easy to use and a cost-effective way for developers and businesses to
+  convert (or “transcode”) media files from their source format into versions that will playback on devices like
+  smartphones, tablets, and PCs.
+* https://aws.amazon.com/elastictranscoder/
+
+## Mobile Services
+
+### AWS AppSync
+
+* AWS AppSync makes it easy to build data-driven mobile and browser-based apps that deliver responsive, collaborative
+  experiences by keeping the data updated when devices are connected, enabling the app to use local data when offline,
+  and synchronizing the data when the devices reconnect.
+* AWS AppSync uses the open standard GraphQL query language so you can request, change, and subscribe to the exact data
+  you need with just a few lines of code.
+* https://aws.amazon.com/appsync/product-details/
+
+### AWS Device Farm
+
+* AWS Device Farm is an app testing service that lets you test and interact with your Android, iOS, and web apps on many
+  devices at once, or reproduce issues on a device in real time.
+* View video, screenshots, logs, and performance data to pinpoint and fix issues and increase quality before shipping
+  your app.
+* https://aws.amazon.com/device-farm/
+
+## End User Computing
+
+### Amazon Workspaces
+
+* Amazon WorkSpaces is a managed, secure cloud desktop service. You can use Amazon WorkSpaces to provision either
+* Windows or Linux desktops in just a few minutes and quickly scale to provide thousands of desktops to workers across
+  the globe.
+* Amazon WorkSpaces offers you an easy way to provide a secure, managed, cloud-based virtual desktop experience to your
+  end-users.
+* Unlike traditional on-premises Virtual Desktop Infrastructure (VDI) solutions, you don’t have to worry about
+  procuring, deploying, and managing a complex environment – Amazon WorkSpaces takes care of the heavy lifting and
+  provides a fully managed service.
+* https://aws.amazon.com/workspaces/features/
+
+### AWS AppStream
+
+* Fully managed non-persistent application streaming service.
+* Alternative to popular products such as Citrix XenApp.
+* https://aws.amazon.com/appstream2/features/
+
+### AWS WorkLink
+
+* Provides secure, one-click access to your internal websites and web apps using mobile phone browsers.
+* Does not require VPN client or App.
+* https://aws.amazon.com/worklink/features/
+
+### AWS WorkDocs
+
+* Fully managed, secure content creation, storage, and collaboration service
+* Create, edit, and share content that’s centrally stored on AWS.
+* https://aws.amazon.com/workdocs/features/
 
 ## Internet of Things (IoT)
 
