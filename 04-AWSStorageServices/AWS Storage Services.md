@@ -1,274 +1,122 @@
-# Additional AWS Services
+# AWS Storage Services
 
-![additional-aws-services](../Images/additional-aws-services.png)
+![aws_storage_services](../Images/aws_storage_services.png)
 
-There are Additional AWS Services & Tools that may feature on the exam. Often you do not need to know these at a deep
-level but do need to understand what they are and what they are used for.
+Within the AWS Cloud there are various service options for many different types of architectures. With regard to the
+different AWS storage types of services, this cheat sheet will give you an in-depth overview on how to decide which of
+the AWS storage options to choose from, and which of the AWS storage services is ideal for any particular use case.
 
-On this page, you’ll find some high-level details and links for more information on some of these services and tools.
+While it may seem challenging to choose the right AWS storage service from the list of AWS storage services, this cheat
+sheet will make this task manageable as it provides a succinct comparison of each AWS storage services.
 
-*Exam tip*: Before sitting the exam, it would be wise to go through the AWS console and pick out any services you’re not
-familiar with and do a bit of reading up on them using the AWS documentation.
+This article will also discuss AWS Compute in the context of the AWS Certified Cloud Practitioner Exam. Keep in mind
+that AWS Compute is one of the key technology areas covered in the exam guide.
 
-*Note*: If a service starts appearing regularly on the exam it may be moved to the main cheat sheet for the AWS service
-category.
+## Amazon Simple Storage Service (S3)
 
-## Compute
+Amazon S3 is object storage built to store and retrieve any amount of data from anywhere – web sites and mobile apps,
+corporate applications, and data from IoT sensors or devices.
 
-### Amazon Elastic Container Service for Kubernetes (EKS)
+You can store any type of file in S3.
 
-* Amazon Elastic Container Service for Kubernetes (EKS) is a managed Kubernetes service that makes it easy for you to
-  run
-  Kubernetes on AWS without needing to install, operate, and maintain your own Kubernetes control plane.
-* EKS is certified Kubernetes conformant, so existing applications running on upstream Kubernetes are compatible with
-  Amazon EKS.
-* EKS automatically manages the availability and scalability of the Kubernetes control plane nodes that are responsible
-  for starting and stopping containers, scheduling containers on virtual machines, storing cluster data, and other
-  tasks.
-* EKS automatically detects and replaces unhealthy control plane nodes for each cluster.
-  Generally available but only in limited regions currently.
+S3 is designed to deliver 99.999999999% durability, and stores data for millions of applications used by market leaders
+in every industry.
 
-https://aws.amazon.com/eks/features/
+S3 provides comprehensive security and compliance capabilities that meet even the most stringent regulatory
+requirements.
 
-## Database
+S3 gives customers flexibility in the way they manage data for cost optimization, access control, and compliance.
 
-### Amazon Neptune
+Typical use cases include:
 
-* Amazon Neptune is a fast, reliable, fully managed graph database service that makes it easy to build and run
-  applications that work with highly connected datasets.
-* With Amazon Neptune, you can create sophisticated, interactive graph applications that can query billions of
-  relationships in milliseconds.
-* SQL queries for highly connected data are complex and hard to tune for performance. Instead, Amazon Neptune allows you
-  to use the popular graph query languages Apache TinkerPop Gremlin and W3C’s SPARQL to execute powerful queries that
-  are
-  easy to write and perform well on connected data.
+* Backup and Storage – Provide data backup and storage services for others.
+* Application Hosting – Provide services that deploy, install, and manage web applications.
+* Media Hosting – Build a redundant, scalable, and highly available infrastructure that hosts video, photo, or music
+  uploads and downloads.
+* Software Delivery – Host your software applications that customers can download.
+* Static Website – you can configure a static website to run from an S3 bucket.
 
-https://aws.amazon.com/neptune/features/
+S3 provides query-in-place functionality, allowing you to run powerful analytics directly on your data at rest in S3.
+And Amazon S3 is the most supported cloud storage service available, with integration from the largest community of
+third-party solutions, systems integrator partners, and other AWS services.
 
-## Migration
+Files can be anywhere from 0 bytes to 5 TB.
 
-### AWS Migration Hub
+There is unlimited storage available.
 
-* AWS Migration Hub provides a single location to track the progress of application migrations across multiple AWS and
-  partner solutions.
-* Using Migration Hub allows you to choose the AWS and partner migration tools that best fit your needs, while providing
-  visibility into the status of migrations across your portfolio of applications.
-* For example, you might use AWS Database Migration Service, AWS Server Migration Service, and partner migration tools
-  such as ATADATA ATAmotion, CloudEndure Live Migration, or RiverMeadow Server Migration SaaS to migrate an application
-  comprised of a database, virtualized web servers, and a bare metal server.
-* Using Migration Hub, you can view the migration progress of all the resources in the application.
+Files are stored in buckets.
 
-https://aws.amazon.com/migration-hub/features/
+Buckets are root level folders.
 
-### AWS Database Migration Service
+Any subfolder within a bucket is known as a “folder”.
 
-* AWS Database Migration Service helps you migrate databases to AWS quickly and securely.
-* The source database remains fully operational during the migration, minimizing downtime to applications that rely on
-  the
-  database.
-* The AWS Database Migration Service can migrate your data to and from most widely used commercial and open-source
-  databases.
-* AWS Database Migration Service supports homogenous migrations such as Oracle to Oracle, as well as heterogeneous
-  migrations between different database platforms, such as Oracle or Microsoft SQL Server to Amazon Aurora.
-* With AWS Database Migration Service, you can continuously replicate your data with high availability and consolidate
-  databases into a petabyte-scale data warehouse by streaming data to Amazon Redshift and Amazon S3.
+S3 is a universal namespace so bucket names must be unique globally.
 
-https://aws.amazon.com/dms/
+There are seven S3 storage classes.
 
-### AWS Server Migration Service
+* S3 Standard (durable, immediately available, frequently accessed).
+* S3 Intelligent-Tiering (automatically moves data to the most cost-effective tier).
+* S3 Standard-IA (durable, immediately available, infrequently accessed).
+* S3 One Zone-IA (lower cost for infrequently accessed data with less resilience).
+* S3 Glacier Instant Retrieval (data that is rarely accessed and requires retrieval in milliseconds).
+* S3 Glacier Flexible Retrieval (archived data, retrieval times in minutes or hours).
+* S3 Glacier Deep Archive (lowest cost storage class for long term retention).
 
-AWS Server Migration Service (SMS) is an agentless service which makes it easier and faster for you to migrate thousands
-of on-premises workloads to AWS
-AWS SMS allows you to automate, schedule, and track incremental replications of live server volumes, making it easier
-for you to coordinate large-scale server migrations
-https://aws.amazon.com/server-migration-service/
+The table below provides the details of each Amazon S3 storage class:
 
-Networking & Content Delivery
-Amazon API Gateway
-Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor,
-and secure APIs at any scale.
-With a few clicks in the AWS Management Console, you can create an API that acts as a “front door” for applications to
-access data, business logic, or functionality from your back-end services.
-Back-end services may include Amazon Elastic Compute Cloud (Amazon EC2), code running on AWS Lambda, or any web
-application.
-https://aws.amazon.com/api-gateway/features/
-Developer Tools
-AWS CodeStar
-AWS CodeStar enables you to quickly develop, build, and deploy applications on AWS. AWS CodeStar provides a unified user
-interface, enabling you to easily manage your software development activities in one place.
-With AWS CodeStar, you can set up your entire continuous delivery toolchain in minutes, allowing you to start releasing
-code faster. AWS CodeStar makes it easy for your whole team to work together securely, allowing you to easily manage
-access and add owners, contributors, and viewers to your projects.
-With AWS CodeStar, you can use a variety of project templates to start developing applications on Amazon EC2, AWS
-Lambda, and AWS Elastic Beanstalk.
-AWS CodeStar projects support many popular programming languages including Java, JavaScript, PHP, Ruby, and Python.
-https://aws.amazon.com/codestar/features/
-AWS CodeCommit
-AWS CodeCommit is a fully managed source control service that hosts secure Git-based repositories.
-It makes it easy for teams to collaborate on code in a secure and highly scalable ecosystem.
-CodeCommit eliminates the need to operate your own source control system or worry about scaling its infrastructure.
-You can use CodeCommit to securely store anything from source code to binaries, and it works seamlessly with your
-existing Git tools.
-https://aws.amazon.com/codecommit/features/
-AWS CodeBuild
-AWS CodeBuild is a fully managed continuous integration service that compiles source code, runs tests, and produces
-software packages that are ready to deploy.
-With CodeBuild, you don’t need to provision, manage, and scale your own build servers. CodeBuild scales continuously and
-processes multiple builds concurrently, so your builds are not left waiting in a queue.
-You can get started quickly by using prepackaged build environments, or you can create custom build environments that
-use your own build tools.
-With CodeBuild, you are charged by the minute for the compute resources you use.
-https://aws.amazon.com/codebuild/features/
-AWS CodeDeploy
-AWS CodeDeploy is a fully managed deployment service that automates software deployments to a variety of compute
-services such as Amazon EC2, AWS Lambda, and your on-premises servers.
-AWS CodeDeploy makes it easier for you to rapidly release new features, helps you avoid downtime during application
-deployment, and handles the complexity of updating your applications.
-You can use AWS CodeDeploy to automate software deployments, eliminating the need for error-prone manual operations. The
-service scales to match your deployment needs, from a single Lambda function to thousands of EC2 instances.
-https://aws.amazon.com/codedeploy/features/
-AWS CodePipeline
-AWS CodePipeline is a fully managed continuous delivery service that helps you automate your release pipelines for fast
-and reliable application and infrastructure updates.
-CodePipeline automates the build, test, and deploy phases of your release process every time there is a code change,
-based on the release model you define.
-This enables you to deliver features and updates rapidly and reliably.
-You can easily integrate AWS CodePipeline with third-party services such as GitHub or with your own custom plugin.
-https://aws.amazon.com/codepipeline/features/
-AWS X-Ray
-AWS X-Ray helps developers analyze and debug production, distributed applications, such as those built using a
-microservices architecture.
-With X-Ray, you can understand how your application and its underlying services are performing to identify and
-troubleshoot the root cause of performance issues and errors.
-X-Ray provides an end-to-end view of requests as they travel through your application and shows a map of your
-application’s underlying components.
-You can use X-Ray to analyze both applications in development and in production, from simple three-tier applications to
-complex microservices applications consisting of thousands of service.
-https://aws.amazon.com/xray/features/
-https://aws.amazon.com/servicecatalog/features/
-AWS Managed Services
-AWS Managed Services provides ongoing management of your AWS infrastructure so you can focus on your applications.
-By implementing best practices to maintain your infrastructure, AWS Managed Services helps to reduce your operational
-overhead and risk.
-AWS Managed Services automates common activities such as change requests, monitoring, patch management, security, and
-backup services, and provides full-lifecycle services to provision, run, and support your infrastructure.
-AWS Managed Services delivers consistent operations management and predictable results by following ITIL® best
-practices, and provides tooling and automation to increase efficiency, and reduce your operational overhead and risk.
-https://aws.amazon.com/managed-services/#
-Analytics
-Amazon Athena
-Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL.
-Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
-With a few clicks in the AWS Management Console, customers can point Athena at their data stored in S3 and begin using
-standard SQL to run ad-hoc queries and get results in seconds.
-You can use Athena to process logs, perform ad-hoc analysis, and run interactive queries
-Athena scales automatically – executing queries in parallel – so results are fast, even with large datasets and complex
-queries.
-https://aws.amazon.com/athena/features/
-Amazon EMR
-Amazon Elastic Map Reduce (EMR) provides a managed Hadoop framework that makes it easy, fast, and cost-effective to
-process vast amounts of data across dynamically scalable Amazon EC2 instances.
-You can also run other popular distributed frameworks such as Apache Spark, HBase, Presto, and Flink in Amazon EMR, and
-interact with data in other AWS data stores such as Amazon S3 and Amazon DynamoDB.
-Amazon EMR securely and reliably handles a broad set of big data use cases, including log analysis, web indexing, data
-transformations (ETL), machine learning, financial analysis, scientific simulation, and bioinformatic.
-https://aws.amazon.com/emr/features/
-Amazon CloudSearch
-Amazon CloudSearch is a managed service in the AWS Cloud that makes it simple and cost-effective to set up, manage, and
-scale a search solution for your website or application.
-Amazon CloudSearch supports 34 languages and popular search features such as highlighting, autocomplete, and geospatial
-search.
-https://aws.amazon.com/cloudsearch/
-Amazon Elasticsearch
-Amazon Elasticsearch Service is a fully managed service that makes it easy for you to deploy, secure, operate, and scale
-Elasticsearch to search, analyze, and visualize data in real-time.
-With Amazon Elasticsearch Service you get easy-to-use APIs and real-time analytics capabilities to power use-cases such
-as log analytics, full-text search, application monitoring, and clickstream analytics, with enterprise-grade
-availability, scalability, and security.
-https://aws.amazon.com/elasticsearch-service/features/
-Amazon Kinesis
-Amazon Kinesis makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights
-and react quickly to new information.
-There are four types of Kinesis service:
-Kinesis Video Streams makes it easy to securely stream video from connected .devices to AWS for analytics, machine
-learning (ML), and other processing.
-Kinesis Data Streams enables you to build custom applications that process or analyze streaming data for specialized
-needs.
-Kinesis Data Firehose is the easiest way to load streaming data into data stores and analytics tools.
-Amazon Kinesis Data Analytics is the easiest way to process and analyze real-time, streaming data.
-https://aws.amazon.com/kinesis/
-https://digitalcloud.training/amazon-kinesis/
-AWS Data Pipeline
-AWS Data Pipeline is a web service that helps you reliably process and move data between different AWS compute and
-storage services, as well as on-premises data sources, at specified intervals.
-With AWS Data Pipeline, you can regularly access your data where it’s stored, transform, and process it at scale, and
-efficiently transfer the results to AWS services such as Amazon S3, Amazon RDS, Amazon DynamoDB, and Amazon EMR.
-AWS Data Pipeline helps you easily create complex data processing workloads that are fault tolerant, repeatable, and
-highly available.
-https://aws.amazon.com/datapipeline/
-AWS Glue
-AWS Glue is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and
-load their data for analytics.
-You can create and run an ETL job with a few clicks in the AWS Management Console.
-You simply point AWS Glue to your data stored on AWS, and AWS Glue discovers your data and stores the associated
-metadata (e.g. table definition and schema) in the AWS Glue Data Catalog.
-Once cataloged, your data is immediately searchable, queryable, and available for ETL.
-AWS Glue generates the code to execute your data transformations and data loading processes.
-https://aws.amazon.com/glue/features/
-Media Services
-Amazon Elastic Transcoder
-Amazon Elastic Transcoder is media transcoding in the cloud.
-It is designed to be a highly scalable, easy to use and a cost-effective way for developers and businesses to convert (
-or “transcode”) media files from their source format into versions that will playback on devices like smartphones,
-tablets, and PCs.
-https://aws.amazon.com/elastictranscoder/
-Mobile Services
-AWS AppSync
-AWS AppSync makes it easy to build data-driven mobile and browser-based apps that deliver responsive, collaborative
-experiences by keeping the data updated when devices are connected, enabling the app to use local data when offline, and
-synchronizing the data when the devices reconnect.
-AWS AppSync uses the open standard GraphQL query language so you can request, change, and subscribe to the exact data
-you need with just a few lines of code.
-https://aws.amazon.com/appsync/product-details/
-AWS Device Farm
-AWS Device Farm is an app testing service that lets you test and interact with your Android, iOS, and web apps on many
-devices at once, or reproduce issues on a device in real time.
-View video, screenshots, logs, and performance data to pinpoint and fix issues and increase quality before shipping your
-app.
-https://aws.amazon.com/device-farm/
-End User Computing
-Amazon Workspaces
-Amazon WorkSpaces is a managed, secure cloud desktop service. You can use Amazon WorkSpaces to provision either Windows
-or Linux desktops in just a few minutes and quickly scale to provide thousands of desktops to workers across the globe.
-Amazon WorkSpaces offers you an easy way to provide a secure, managed, cloud-based virtual desktop experience to your
-end-users.
-Unlike traditional on-premises Virtual Desktop Infrastructure (VDI) solutions, you don’t have to worry about procuring,
-deploying, and managing a complex environment – Amazon WorkSpaces takes care of the heavy lifting and provides a fully
-managed service.
-https://aws.amazon.com/workspaces/features/
-AWS AppStream
-Fully managed non-persistent application streaming service.
-Alternative to popular products such as Citrix XenApp.
-https://aws.amazon.com/appstream2/features/
-AWS WorkLink
-Provides secure, one-click access to your internal websites and web apps using mobile phone browsers.
-Does not require VPN client or App.
-https://aws.amazon.com/worklink/features/
-AWS WorkDocs
-Fully managed, secure content creation, storage, and collaboration service
-Create, edit, and share content that’s centrally stored on AWS.
-https://aws.amazon.com/workdocs/features/
+![aws_storage_table](aws_storage_table.png)
 
-Internet of Things (IoT)
-AWS IoT Core
-Describes the network of physical objects that are embedded with sensors or software.
-Each IoT device can communicate and exchange data with other devices and systems.
-Use cases include:
-Smart home automation.
-Smart healthcare.
-Manufacturing.
-Agriculture.
-Allows you to connect IoT devices to the AWS cloud without the need to provision or manage servers.
-Can support billions of devices and trillions of messages.
-https://aws.amazon.com/iot-core/features/
-Related posts:
+When you successfully upload a file to S3 you receive a HTTP 200 code.
+
+S3 is a persistent, highly durable data store.
+
+Persistent data stores are non-volatile storage systems that retain data when powered off.
+
+This contrasts with transient data stores and ephemeral data stores which lose the data when powered off.
+
+The following table provides a description of persistent, transient, and ephemeral data stores and which AWS service to use:
+
+![aws_storage_table_2](aws_storage_table_2.png)
+
+Bucket names must follow a set of rules:
+
+* Names must be unique across all of AWS.
+* Names must be 3 to 63 characters in length.
+* Names can only contain lowercase letters, numbers, and hyphens.
+* Names cannot be formatted as an IP address.
+
+Objects consist of:
+
+* Key (name of the object).
+* Value (data made up of a sequence of bytes).
+* Version ID (used for versioning).
+* Metadata (data about the data that is stored).
+
+Subresources:
+
+* Access control lists.
+* Torrent.
+
+Object sharing – the ability to make any object publicly available via a URL.
+
+Lifecycle management – set rules to transfer objects between storage classes at defined time intervals.
+
+Versioning – automatically keep multiple versions of an object (when enabled).
+
+Encryption can be enabled for bucket.
+
+Data is secured using ACLs and bucket policies.
+
+Charges:
+
+* Storage.
+* Requests.
+* Storage management pricing.
+* Data transfer pricing.
+* Transfer acceleration.
+
+When you create a bucket you need to select the region where it will be created.
+
+It is a best practice to create buckets in regions that are physically closest to your users to reduce latency.
+
+Additional capabilities offered by Amazon S3 include:

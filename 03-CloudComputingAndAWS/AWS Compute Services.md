@@ -1,7 +1,10 @@
+# AWS Compute Services
+
 This article discusses AWS Compute in the context of the AWS Certified Cloud Practitioner Exam. This is one of the key
 technology areas covered in the exam guide.
 
-Amazon EC2
+## Amazon EC2
+
 Amazon Elastic Compute Cloud (Amazon EC2) is a web service with which you can run virtual server “instances” in the
 cloud.
 
@@ -18,96 +21,108 @@ scenarios.
 
 Benefits of EC2 include:
 
-Elastic Web-Scale computing – you can increase or decrease capacity within minutes not hours and commission one to
-thousands of instances simultaneously.
-Completely controlled – You have complete control include root access to each instance and can stop and start instances
-without losing data and using web service APIs.
-Flexible Cloud Hosting Services – you can choose from multiple instance types, operating systems, and software packages
-as well as instances with varying memory, CPU, and storage configurations.
-Integrated – EC2 is integrated with most AWS services such as S3, RDS, and VPC to provide a complete, secure solution.
-Reliable – EC2 offers a highly reliable environment where replacement instances can be rapidly and predictably
-commissioned with SLAs of 99.99% for each region.
-Secure – EC2 works in conjunction with VPC to provide a secure location with an IP address range you specify and offers
-Security Groups, Network ACLs, and IPSec VPN features.
-Inexpensive – Amazon passes on the financial benefits of scale by charging very low rates and on a capacity consumed
-basis.
+* Elastic Web-Scale computing – you can increase or decrease capacity within minutes not hours and commission one to
+  thousands of instances simultaneously.
+* Completely controlled – You have complete control include root access to each instance and can stop and start
+  instances without losing data and using web service APIs.
+* Flexible Cloud Hosting Services – you can choose from multiple instance types, operating systems, and software
+  packages as well as instances with varying memory, CPU, and storage configurations.
+* Integrated – EC2 is integrated with most AWS services such as S3, RDS, and VPC to provide a complete, secure solution.
+* Reliable – EC2 offers a highly reliable environment where replacement instances can be rapidly and predictably
+  commissioned with SLAs of 99.99% for each region.
+* Secure – EC2 works in conjunction with VPC to provide a secure location with an IP address range you specify and
+  offers Security Groups, Network ACLs, and IPSec VPN features.
+* Inexpensive – Amazon passes on the financial benefits of scale by charging very low rates and on a capacity consumed
+  basis.
+
 An Amazon Machine Image (AMI) is a special type of virtual appliance that is used to create a virtual machine within the
 Amazon Elastic Compute Cloud (“EC2”).
 
 An AMI includes the following:
 
-One or more EBS snapshots, or, for instance-store-backed AMIs, a template for the root volume of the instance (for
-example, an operating system, an application server, and applications).
-Launch permissions that control which AWS accounts can use the AMI to launch instances.
-A block device mapping that specifies the volumes to attach to the instance when it’s launched.
+* One or more EBS snapshots, or, for instance-store-backed AMIs, a template for the root volume of the instance (for
+  example, an operating system, an application server, and applications).
+* Launch permissions that control which AWS accounts can use the AMI to launch instances.
+* A block device mapping that specifies the volumes to attach to the instance when it’s launched.
+
 AMIs come in three main categories:
 
-Community AMIs – free to use, generally you just select the operating system you want.
-AWS Marketplace AMIs – pay to use, generally come packaged with additional, licensed software.
-My AMIs – AMIs that you create yourself.
+* Community AMIs – free to use, generally you just select the operating system you want.
+* AWS Marketplace AMIs – pay to use, generally come packaged with additional, licensed software.
+* My AMIs – AMIs that you create yourself.
 
 ![ec2-instance-launch](../Images/ec2-instance-launch.png)
 
 Metadata and User Data:
 
-User data is data that is supplied by the user at instance launch in the form of a script.
-Instance metadata is data about your instance that you can use to configure or manage the running instance.
-User data is limited to 16KB.
-User data and metadata are not encrypted.
-Instance metadata is available at http://169.254.169.254/latest/meta-data.
+* User data is data that is supplied by the user at instance launch in the form of a script.
+* Instance metadata is data about your instance that you can use to configure or manage the running instance.
+* User data is limited to 16KB.
+* User data and metadata are not encrypted.
+* Instance metadata is available at http://169.254.169.254/latest/meta-data.
+
 The Instance Metadata Query tool allows you to query the instance metadata without having to type out the full URI or
 category names.
 
-Pricing
-On-demand:
+## Pricing
 
-Good for users that want the low cost and flexibility of EC2 without any up-front payment or long-term commitment.
-Applications with short term, spiky, or unpredictable workloads that cannot be interrupted.
-Applications being developed or tested on EC2 for the first time.
-Reserved:
+### On-demand:
 
-Applications with steady state or predictable usage.
-Applications that require reserved capacity.
-Users can make up-front payments to reduce their total computing costs even further.
-Standard Reserved Instances (RIs) provide up to 75% off on-demand price.
-Convertible RIs provide up to 54% off on-demand price – provides the capability to change the attributes of the RI if
-the exchange results in the creation of RIs of equal or greater value.
-Scheduled RIs are available to launch within the time window you reserve. This option allows you to match your capacity
-reservation to a predictable recurring schedule that only requires a fraction of a day, a week, or a month.
-Spot:
+* Good for users that want the low cost and flexibility of EC2 without any up-front payment or long-term commitment.
+* Applications with short term, spiky, or unpredictable workloads that cannot be interrupted.
+* Applications being developed or tested on EC2 for the first time.
 
-Applications that have flexible start and end times.
-Applications that are only feasible at very low compute prices.
-Users with an urgent need for a large amount of additional compute capacity.
-If Amazon terminate your instances you do not pay, if you terminate you pay for the hour.
-Dedicated hosts:
+### Reserved:
 
-Physical servers dedicated just for your use.
-You then have control over which instances are deployed on that host.
-Available as On-Demand or with Dedicated Host Reservation.
-Useful if you have server-bound software licenses that use metrics like per-core, per-socket, or per-VM.
-Each dedicated host can only run one EC2 instance size and type.
-Good for regulatory compliance or licensing requirements.
-Predictable performance.
-Complete isolation.
-Most expensive option.
-Billing is per host.
-Dedicated instances:
+* Applications with steady state or predictable usage.
+* Applications that require reserved capacity.
+* Users can make up-front payments to reduce their total computing costs even further.
+* Standard Reserved Instances (RIs) provide up to 75% off on-demand price.
+* Convertible RIs provide up to 54% off on-demand price – provides the capability to change the attributes of the RI if
+  the exchange results in the creation of RIs of equal or greater value.
+* Scheduled RIs are available to launch within the time window you reserve. This option allows you to match your
+  capacity reservation to a predictable recurring schedule that only requires a fraction of a day, a week, or a month.
 
-Virtualized instances on hardware just for you.
-Also uses physically dedicated EC2 servers.
-Does not provide the additional visibility and controls of dedicated hosts (e.g. how instances are placed on a server).
-Billing is per instance.
-May share hardware with other non-dedicated instances in the same account.
-Available as On-Demand, Reserved Instances, and Spot Instances.
-Cost additional $2 per hour per region.
-Savings Plans:
+### Spot:
 
-Savings Plans is a flexible pricing model that provides savings of up to 72% on your AWS compute usage.
-This pricing model offers lower prices on Amazon EC2 instances usage, regardless of instance family, size, OS, tenancy,
-or AWS Region.
-Also applies to AWS Fargate and AWS Lambda usage.
-Instance Types
+* Applications that have flexible start and end times.
+* Applications that are only feasible at very low compute prices.
+* Users with an urgent need for a large amount of additional compute capacity.
+* If Amazon terminate your instances you do not pay, if you terminate you pay for the hour.
+
+### Dedicated hosts:
+
+* Physical servers dedicated just for your use.
+* You then have control over which instances are deployed on that host.
+* Available as On-Demand or with Dedicated Host Reservation.
+* Useful if you have server-bound software licenses that use metrics like per-core, per-socket, or per-VM.
+* Each dedicated host can only run one EC2 instance size and type.
+* Good for regulatory compliance or licensing requirements.
+* Predictable performance.
+* Complete isolation.
+* Most expensive option.
+* Billing is per host.
+
+### Dedicated instances:
+
+* Virtualized instances on hardware just for you.
+* Also uses physically dedicated EC2 servers.
+* Does not provide the additional visibility and controls of dedicated hosts (e.g. how instances are placed on a
+  server).
+* Billing is per instance.
+* May share hardware with other non-dedicated instances in the same account.
+* Available as On-Demand, Reserved Instances, and Spot Instances.
+* Cost additional $2 per hour per region.
+
+### Savings Plans:
+
+* Savings Plans is a flexible pricing model that provides savings of up to 72% on your AWS compute usage.
+* This pricing model offers lower prices on Amazon EC2 instances usage, regardless of instance family, size, OS,
+  tenancy, or AWS Region.
+* Also applies to AWS Fargate and AWS Lambda usage.
+
+### Instance Types
+
 Amazon EC2 provides a wide selection of instance types optimized to fit different use cases.
 
 Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and give you the
@@ -120,7 +135,8 @@ The table below helps you to understand some of the various EC2 instance familie
 
 ![instance-types](../Images/instance-types.png)
 
-Amazon Elastic Container Service (ECS)
+### Amazon Elastic Container Service (ECS)
+
 Amazon Elastic Container Service (ECS) is another product in the AWS Compute category. It provides a highly scalable,
 high performance container management service that supports Docker containers and allows you to easily run applications
 on a managed cluster of Amazon EC2 instances.
@@ -137,11 +153,8 @@ An Amazon ECS launch type determines the type of infrastructure on which your ta
 
 There are two launch types, and the table below describes some of the differences between the two launch types:
 
-Amazon EC2 Amazon Fargate
-You explicitly provision EC2 instances The control plane asks for resources and Fargate automatically provisions
-You’re responsible for upgrading, patching, care of EC2 pool Fargate provisions compute as needed
-You must handle cluster optimization Fargate handles cluster optimization
-More granular control over infrastructure Limited control, as infrastructure is automated
+![aws_type_table](../Images/aws_type_table.png)
+
 The Elastic container registry (ECR) is a managed AWS Docker registry service for storing, managing, and deploying
 Docker images.
 
@@ -153,7 +166,8 @@ Amazon ECR is integrated with Amazon EC2 Container Service (ECS).
 With Amazon ECR, there are no upfront fees or commitments. You pay only for the amount of data you store in your
 repositories and data transferred to the Internet.
 
-AWS Lambda
+### AWS Lambda
+
 AWS Lambda is a serverless computing technology that allows you to run code without provisioning or managing servers.
 
 AWS Lambda executes code only when needed and scales automatically.
@@ -162,17 +176,20 @@ You pay only for the compute time you consume (you pay nothing when your code is
 
 Benefits of AWS Lambda:
 
-No servers to manage.
-Continuous scaling.
-Millisecond billing.
-Integrates with almost all other AWS services.
+* No servers to manage.
+* Continuous scaling.
+* Millisecond billing.
+* Integrates with almost all other AWS services.
+
 Primary use cases for AWS Lambda:
 
-Data processing.
-Real-time file processing.
-Real-time stream processing.
-Build serverless backends for web, mobile, IOT, and 3rd party API requests.
-Amazon LightSail
+* Data processing.
+* Real-time file processing.
+* Real-time stream processing.
+* Build serverless backends for web, mobile, IOT, and 3rd party API requests.
+
+### Amazon LightSail
+
 Amazon LightSail Instances
 
 Amazon LightSail is one of the newest services in the AWS Compute suite of products. Amazon LightSail is great for users
@@ -212,7 +229,8 @@ MEAN, Node.js, and more.
 Amazon LightSail currently supports 6 Linux or Unix-like distributions: Amazon Linux, CentOS, Debian, FreeBSD, OpenSUSE,
 and Ubuntu, as well as 2 Windows Server versions: 2012 R2 and 2016.
 
-Amazon LightSail Databases
+### Amazon LightSail Databases
+
 Amazon LightSail databases are instances that are dedicated to running databases.
 
 An Amazon LightSail database can contain multiple user-created databases, and you can access it by using the same tools
@@ -240,7 +258,8 @@ Amazon LightSail plans are billed on an on-demand hourly rate, so you pay only f
 
 For every Amazon LightSail plan you use, we charge you the fixed hourly price, up to the maximum monthly plan cost.
 
-AWS Elastic Beanstalk
+### AWS Elastic Beanstalk
+
 AWS Elastic Beanstalk is the fastest and simplest way to get web applications up and running on AWS.
 
 Developers simply upload their application code, and the service automatically handles all the details such as resource
@@ -253,7 +272,7 @@ Scaling, and Elastic Load Balancing to easily support applications that need to 
 
 ![aws-elastic-beanstalk-application](../Images/aws-elastic-beanstalk-application.png)
 
-AWS Batch
+### AWS Batch
 
 AWS Batch enables developers, scientists, and engineers to run hundreds of thousands of batch computing jobs easily and
 efficiently on AWS.
@@ -267,12 +286,12 @@ using the AWS Management Console, CLIs, or SDKs.
 AWS Batch allows you to specify execution parameters and job dependencies, and facilitates integration with a broad
 range of popular batch computing workflow engines and languages (e.g., Pegasus WMS, Luigi, and AWS Step Functions).
 
-AWS Batch efficiently and dynamically provisions and scales Amazon EC2 and Spot Instances based on the requirements of
-your jobs. AWS Batch provides default job queues and compute environment definitions that enable you to get started
-quickly.
+AWS Batch efficiently and dynamically provisions and scales [Amazon EC2](https://aws.amazon.com/ec2/)
+and [Spot](https://aws.amazon.com/ec2/spot/) Instances based on the requirements of your jobs. AWS Batch provides
+default job queues and compute environment definitions that enable you to get started quickly.
 
 Related posts:
 
-https://digitalcloud.training/aws-machine-learning-services/
-https://digitalcloud.training/amazon-cognito/
-https://digitalcloud.training/amazon-dynamodb/
+![https://digitalcloud.training/aws-datasync/](../Images/aws_guardduty.png)
+![https://digitalcloud.training/aws-kms/](../Images/aws_kms.png)
+![https://digitalcloud.training/aws-storage-services/](../Images/aws_storage_services.png)

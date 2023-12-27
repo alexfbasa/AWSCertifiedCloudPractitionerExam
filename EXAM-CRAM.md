@@ -1,6 +1,4 @@
----
-
-'# 'Exam Cram: Cloud Computing and AWS
+# Exam Cram: Cloud Computing and AWS
 
 ## Introduction
 
