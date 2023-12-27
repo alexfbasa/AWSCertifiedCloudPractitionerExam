@@ -1,6 +1,6 @@
 # Additional AWS Services
 
-![additional_aws_services](additional_aws_services.png)
+![additional_aws_services](../Images/additional_aws_services.png)
 
 There are Additional AWS Services & Tools that may feature on the exam. Often you do not need to know these at a deep
 level but do need to understand what they are and what they are used for.

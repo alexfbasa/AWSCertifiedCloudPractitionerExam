@@ -66,9 +66,3 @@ CloudFront uses Edge Locations and Regional Edge Caches:
 The diagram below shows where Regional Edge Caches and Edge Locations are placed in relation to end users:
 
 ![aws-cloudfront-edge-cache](../Images/aws-cloudfront-edge-cache.png)
-
-Related posts:
-
-![https://digitalcloud.training/aws-machine-learning-services/](../Images/aws-machine-learning-services.png)
-![https://digitalcloud.training/aws-secrets-manager/](../Images/aws-secrets-manager.png)
-![https://digitalcloud.training/auto-scaling-and-elastic-load-balancing/](../Images/auto-scaling-and-elastic-load-balancing.png)

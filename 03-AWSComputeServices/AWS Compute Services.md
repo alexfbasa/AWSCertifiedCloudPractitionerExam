@@ -1,6 +1,6 @@
 # AWS Compute Services
 
-![aws_compute](aws_compute.png)
+![aws_compute](../Images/aws_compute.png)
 
 This article discusses AWS Compute in the context of the AWS Certified Cloud Practitioner Exam. This is one of the key
 technology areas covered in the exam guide.
@@ -124,6 +124,8 @@ category names.
 * Also applies to AWS Fargate and AWS Lambda usage.
 
 ### Instance Types
+
+![aws_compute](../Images/aws_compute.png)
 
 Amazon EC2 provides a wide selection of instance types optimized to fit different use cases.
 
@@ -291,11 +293,3 @@ range of popular batch computing workflow engines and languages (e.g., Pegasus W
 AWS Batch efficiently and dynamically provisions and scales [Amazon EC2](https://aws.amazon.com/ec2/)
 and [Spot](https://aws.amazon.com/ec2/spot/) Instances based on the requirements of your jobs. AWS Batch provides
 default job queues and compute environment definitions that enable you to get started quickly.
-
-Related posts:
-
-![https://digitalcloud.training/amazon-aurora/](amazon-aurora.png)
-
-![https://digitalcloud.training/aws-content-delivery-and-dns-services/](aws-content-delivery-and-dns-services.png)
-
-![https://digitalcloud.training/aws-iam/](aws-iam.png)

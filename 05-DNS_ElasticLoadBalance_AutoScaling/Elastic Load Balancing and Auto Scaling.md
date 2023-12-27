@@ -74,9 +74,3 @@ latencies.
 Network Load Balancer is also optimized to handle sudden and volatile traffic patterns.
 
 ![elastic-load-balancing-ec2-auto-scaling](../Images/elastic-load-balancing-ec2-auto-scaling.png)
-
-Related posts:
-
-![https://digitalcloud.training/aws-front-end-web-and-mobile/](../Images/aws_front_end_web_and_mobile.png)
-![https://digitalcloud.training/aws-datasync/](../Images/aws_guardduty.png)
-![https://digitalcloud.training/amazon-ec2-auto-scaling/](../Images/amazon_ec2_auto_scaling.png)

@@ -323,8 +323,3 @@ applications to access shared file storage. SMB file shares can also be accessed
 application or user can access the storage. AWS Microsoft Managed AD and your on-premises Microsoft Active Directory can
 be integrated with Amazon FSx to control user access.
 
-Related posts:
-
-![https://digitalcloud.training/aws-cloudtrail/](../Images/aws_cloudtrail.png)
-![https://digitalcloud.training/aws-networking-services/](../Images/aws-networking-services.png)
-![https://digitalcloud.training/aws-end-user-computing/](../Images/aws-end-user-computing.png)
