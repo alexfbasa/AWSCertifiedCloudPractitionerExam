@@ -74,7 +74,8 @@ Persistent data stores are non-volatile storage systems that retain data when po
 
 This contrasts with transient data stores and ephemeral data stores which lose the data when powered off.
 
-The following table provides a description of persistent, transient, and ephemeral data stores and which AWS service to use:
+The following table provides a description of persistent, transient, and ephemeral data stores and which AWS service to
+use:
 
 ![aws_storage_table_2](aws_storage_table_2.png)
 
@@ -120,3 +121,202 @@ When you create a bucket you need to select the region where it will be created.
 It is a best practice to create buckets in regions that are physically closest to your users to reduce latency.
 
 Additional capabilities offered by Amazon S3 include:
+
+![aws_storage_table_3](aws_storage_table_3.png)
+
+## AWS Snowball
+
+With AWS Snowball (Snowball), you can transfer hundreds of terabytes or petabytes of data between your on-premises data
+centers and Amazon Simple Storage Service (Amazon S3).
+
+Uses a secure storage device for physical transportation.
+
+AWS Snowball Client is software that is installed on a local computer and is used to identify, compress, encrypt, and
+transfer data.
+
+Uses 256-bit encryption (managed with the AWS KMS) and tamper-resistant enclosures with TPM.
+
+The table below describes the AWS Snow offerings at a high-level:
+
+![aws_storage_table_4](aws_storage_table_4.png)
+
+Snowball can import to S3 or export from S3.
+
+Import/export is when you send your own disks into AWS – this is being deprecated in favor of Snowball.
+
+Snowball must be ordered from and returned to the same region.
+
+To speed up data transfer it is recommended to run simultaneous instances of the AWS Snowball Client in multiple
+terminals and transfer small files as batches.
+
+## Amazon Elastic Block Store (EBS)
+
+Amazon Elastic Block Store (Amazon EBS) provides persistent block storage volumes for use with Amazon EC2 instances in
+the AWS Cloud.
+
+Each Amazon EBS volume is automatically replicated within its Availability Zone to protect you from component failure,
+offering high availability and durability.
+
+Amazon EBS volumes offer the consistent and low-latency performance needed to run your workloads. With Amazon EBS, you
+can scale your usage up or down within minutes – all while paying a low price for only what you provision.
+
+The following EBS volumes appear most often on the AWS exams:
+
+![aws_storage_table_5](aws_storage_table_5.png)
+
+EBS volume data persists independently of the life of the instance.
+
+EBS volumes do not need to be attached to an instance.
+
+You can attach multiple EBS volumes to an instance.
+
+You cannot attach an EBS volume to multiple instances (use Elastic File Store instead).
+
+EBS volumes must be in the same AZ as the instances they are attached to.
+
+Termination protection is turned off by default and must be manually enabled (keeps the volume/data when the instance is
+terminated).
+
+Root EBS volumes are deleted on termination by default.
+
+Extra non-boot volumes are not deleted on termination by default.
+
+The behavior can be changed by altering the “DeleteOnTermination” attribute.
+
+EBS Snapshots:
+
+Snapshots capture a point-in-time state of an instance.
+Snapshots are stored on S3.
+Does not provide granular backup (not a replacement for backup software).
+If you make periodic snapshots of a volume, the snapshots are incremental, which means that only the blocks on the
+device that have changed after your last snapshot are saved in the new snapshot.
+Even though snapshots are saved incrementally, the snapshot deletion process is designed so that you need to retain only
+the most recent snapshot to restore the volume.
+Snapshots can only be accessed through the EC2 APIs.
+EBS volumes are AZ specific, but snapshots are region specific.
+
+![amazon-ebs-snapshots](amazon-ebs-snapshots.png)
+
+## Instance Store Volumes
+
+Instance store volumes are high performance local disks that are physically attached to the host computer on which an
+EC2 instance runs.
+
+Instance stores are ephemeral which means the data is lost when powered off (non-persistent).
+
+Instances stores are ideal for temporary storage of information that changes frequently, such as buffers, caches, or
+scratch data.
+
+Instance store volume root devices are created from AMI templates stored on S3.
+
+Instance store volumes cannot be detached/reattached.
+
+Amazon Elastic File System (EFS)
+EFS is a fully managed service that makes it easy to set up and scale file storage in the Amazon Cloud.
+
+Good for big data and analytics, media processing workflows, content management, web serving, home directories etc.
+
+EFS uses the NFS protocol.
+
+Pay for what you use (no pre-provisioning required).
+
+Can scale up to petabytes.
+
+EFS is elastic and grows and shrinks as you add and remove data.
+
+Can concurrently connect 1 to 1000s of EC2 instances, from multiple AZs.
+
+A file system can be accessed concurrently from all AZs in the region where it is located.
+
+By default you can create up to 10 file systems per account.
+
+On-premises access can be enabled via Direct Connect or AWS VPN.
+
+Can choose General Purpose or Max I/O (both SSD).
+
+The VPC of the connecting instance must have DNS hostnames enabled.
+
+EFS provides a file system interface, file system access semantics (such as strong consistency and file locking).
+
+Data is stored across multiple AZs within a region.
+
+Read after write consistency.
+
+Need to create mount targets and choose AZs to include (recommended to include all AZ’s).
+
+Instances can be behind an ELB.
+
+There are two performance modes:
+
+“General Purpose” performance mode is appropriate for most file systems.
+“Max I/O” performance mode is optimized for applications where tens, hundreds, or thousands of EC2 instances are
+accessing the file system.
+Amazon EFS is designed to burst to allow high throughput levels for periods of time.
+
+amazon-efs-filesystems
+
+## AWS Storage Gateway
+AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud
+storage.
+
+Customers use Storage Gateway to simplify storage management and reduce costs for key hybrid cloud storage use cases.
+
+These include moving backups to the cloud, using on-premises file shares backed by cloud storage, and providing low
+latency access to data in AWS for on-premises applications.
+
+To support these use cases, Storage Gateway offers three different types of gateways:
+
+* File Gateway – provides file system interfaces to on-premises servers.
+* Volume Gateway – provides block-based access for on-premises servers.
+* Tape Gateway – provides a virtual tape library that is compatible with common backup software (block and file
+interfaces).
+
+## AWS Backup
+
+The AWS Backup service offers a centralized backup console, APIs, and command line interface for managing backups across
+AWS services, including:
+
+* Amazon Simple Storage Service (S3)
+* Amazon Elastic Block Store (EBS)
+* Amazon FSx
+* Amazon Elastic Compute Cloud (EC2)
+* Amazon Relational Database Service (RDS)
+* Amazon DynamoDB
+* Amazon Elastic File System (EFS)
+* AWS Storage Gateway
+* … and more
+
+AWS Backup allows you to centrally manage backup policies that meet your backup requirements and apply them across your
+AWS resources across AWS services as well as hybrid cloud workloads. This enables you to back up your application data
+consistently and in accordance with compliance requirements. Moreover, AWS Backup’s centralized backup console offers a
+consolidated view of your backups and backup activity logs, making it easier to audit your backups.
+
+## Amazon FSX for Lustre
+
+For compute workloads, Amazon FSx for Lustre provides scalable, high-performance, cost-effective storage for compute
+workloads. Based on Lustre, the world’s most popular high-performance file system, FSx for Lustre provides shared
+storage with sub-ms latencies, up to terabytes of throughput, and millions of IOPS. It is also possible to link FSx for
+Lustre file systems to Amazon Simple Storage Service (S3) buckets, allowing you to access and process data
+simultaneously from both.
+
+A number of the fastest computers in the world use the Lustre open source file system to process ever-growing data sets
+quickly and cheaply. It is suitable for workloads ranging from genome sequencing to video transcoding to machine
+learning to fraud detection. Lustre has been battle-tested across a wide range of industries – from energy to life
+sciences to media production to financial services.
+
+## Amazon FSX for Windows File Server
+Your applications and end users can access reliable, performant, and secure shared file storage with Amazon FSx for
+Windows File Server. Using Amazon FSx, you can create highly available and durable file systems that span multiple
+availability zones (AZs) and can be accessed from up to thousands of computing instances.
+
+In addition to providing a rich set of administrative and security features, it also integrates with Microsoft Active
+Directory (AD). For a variety of workloads, Amazon FSx provides high levels of file system throughput and IOPS as well
+as consistent sub-millisecond latencies.
+
+Based on Windows Server, Amazon FSx includes a rich set of administrative features, including end-user file restore,
+user quotas, and access control lists (ACLs). Windows Server supports the SMB protocol natively, allowing Windows-based
+applications to access shared file storage. SMB file shares can also be accessed from Linux and MacOS, so any
+application or user can access the storage. AWS Microsoft Managed AD and your on-premises Microsoft Active Directory can
+be integrated with Amazon FSx to control user access.
+
+Related posts:
