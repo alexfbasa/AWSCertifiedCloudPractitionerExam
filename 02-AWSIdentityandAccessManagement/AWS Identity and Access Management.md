@@ -393,11 +393,4 @@ difficult topic to master, understanding it in depth will set a great foundation
 If you’re keen to deepen your understanding of AWS IAM, check out the popular AWS Identity Management Masterclass from
 Digital Cloud Training which includes both theory lessons and practical hands-on labs.
 
-Related posts:
-
-![https://digitalcloud.training/aws-secrets-manager/](../Images/aws-secrets-manager.png)
-
-![https://digitalcloud.training/amazon-cloudwatch/](../Images/amazon-cloudwatch.png)
-
-![https://digitalcloud.training/aws-storage-gateway/](../Images/aws-storage-gateway.png)
 

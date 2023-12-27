@@ -151,11 +151,3 @@ virtualization technologies to try and increase resource utilization.
 The following article provides some additional information:
 
 [Cloud Computing Deployment Models – Public, Private & Hybrid](https://digitalcloud.training/cloud-computing-deployment-models/)
-
-Related posts:
-
-![https://digitalcloud.training/aws-billing-and-pricing/](../Images/aws_billing_pricing.png)
-
-![https://digitalcloud.training/aws-storage-gateway/](../Images/aws_storage_gateway.png)
-
-![https://digitalcloud.training/amazon-opensearch/](../Images/amazon_opensearch.png)

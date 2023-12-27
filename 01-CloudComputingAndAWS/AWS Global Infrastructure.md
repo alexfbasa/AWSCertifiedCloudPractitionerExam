@@ -137,11 +137,4 @@ The following diagram shows CloudFront Edge locations:
 
 ![aws_cloudfront](../Images/aws_cloudfront.png)
 
-Related posts:
-
-![https://digitalcloud.training/additional-aws-services/](../Images/additional_aws_services.png)
-
-![https://digitalcloud.training/amazon-dynamodb/](../Images/amazon_dynamodb.png)
-
-![https://digitalcloud.training/aws-analytics-services/](../Images/aws_analytics_services.png)
 

@@ -391,10 +391,3 @@ or when your RI and Savings Plans’ coverage or utilization drops below your th
 
 Create annual, quarterly, monthly, or even daily budgets depending on your business needs.
 
-Related posts:
-
-![https://digitalcloud.training/aws-sam/](../Images/aws_sam.png)
-
-![https://digitalcloud.training/aws-systems-manager/](../Images/aws_system_manager.png)
-
-![https://digitalcloud.training/aws-datasync/](../Images/aws_datasync.png)
