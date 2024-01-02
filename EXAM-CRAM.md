@@ -299,6 +299,7 @@ various operating systems, including Windows, Linux, and MacOS.
 **Tip:**
 Understand EC2 as the fundamental compute resource in AWS. Master the creation and management of EC2 instances for
 diverse workloads.
+Some EC2 instances the customers using AWS services must patch operating systems. **Windows** instance for example.
 
 ### 2. Amazon Machine Image (AMI)
 
@@ -990,9 +991,10 @@ RDS is well-suited for online stores and banking systems, offering ease of manag
 
 **Explanation:**
 
-- Part of the RDS family, compatible with MySQL and PostgreSQL.
+- Part of the RDS family, compatible with **MySQL** and **PostgreSQL**.
 - Distributed, fault-tolerant, self-healing storage system.
 - Auto-scales up to 128TB per database instance.
+- Has automatic backup enabled.
 
 **Tip:**
 Amazon Aurora provides a robust and scalable relational database solution in the AWS environment.

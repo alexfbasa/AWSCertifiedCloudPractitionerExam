@@ -18,7 +18,7 @@ is designed to test your foundational knowledge of the AWS Cloud.
 ## Exam Information
 
 - **Exam Name:** AWS Certified Cloud Practitioner
-- **Exam Code:** CLF-C01
+- **Exam Code:** CLF-C02
 - **Exam Duration:** 90 minutes
 - **Number of Questions:** 65
 - **Exam Type:** Multiple Choice and Multiple Answer
@@ -34,9 +34,34 @@ is designed to test your foundational knowledge of the AWS Cloud.
 
 ## Exam Topics
 
-- Cloud Concepts
-- Security and Compliance
-- Technology
+* Cloud Concepts
+* Security and Compliance
+* Technology
+* Billing and Pricing
+* Support Plans
+* AWS Services
+
+You can find all the content structured into these folders:
+
+* 01-CloudComputingAndAWS
+* * [AWS Billing and Pricing](/01-CloudComputingAndAWS/AWS%20Billing%20and%20Pricing.md) 
+* * [AWS Cloud Computing Concepts](01-CloudComputingAndAWS/AWS%20Cloud%20Computing%20Concepts.md) 
+* * [AWS Global Infrastructure](01-CloudComputingAndAWS/AWS%20Global%20Infrastructure.md)
+
+* 02-AWSIdentityandAccessManagement
+* * [AWS Identity and Access Management](/02-AWSIdentityandAccessManagement/AWS%20Identity%20and%20Access%20Management.md)
+
+* 03-AWSComputeServices
+* * [Additional AWS Services](/03-AWSComputeServices/Additional%20AWS%20Services.md)
+* * [AWS Compute Services](/03-AWSComputeServices/AWS%20Compute%20Services.md)
+
+* 04-AWSStorageServices
+* * [AWS Storage Services.md](/04-AWSStorageServices/AWS%20Storage%20Services.md)
+
+* 05-DNS_ElasticLoadBalance_AutoScaling
+* * [Content Delivery and DNS Services](05-DNS_ElasticLoadBalance_AutoScaling/Content%20Delivery%20and%20DNS%20Services.md)
+* * [Content Delivery and DNS Services](05-DNS_ElasticLoadBalance_AutoScaling/Elastic%20Load%20Balancing%20and%20Auto%20Scaling.md)
+
 - Billing and Pricing
 - Support Plans
 - AWS Services
